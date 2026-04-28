@@ -115,7 +115,7 @@
                 </span>
               </h1>
               <!-- Version Badge -->
-              <div class="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 text-sm font-medium text-white"> Tương thích với các phiên bản 20.X, 25.1 và 25.2 </div>
+              <div class="mt-4 inline-flex items-center px-3 py-1 rounded-full bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 text-sm font-medium text-white"> Tương thích với tất cả các phiên bản </div>
               <!-- Theme Toggle -->
               <div class="mt-4">
                 <button onclick="toggleTheme()" class="px-3 py-1 border border-primary-100 rounded-full drop-shadow-sm text-sm text-primary-700 dark:text-white bg-white/40 dark:bg-neutral-900/40 backdrop-blur-lg hover:border-primary-200 transition-colors dark:border-primary-600 dark:hover:border-primary-400"> Đổi giao diện sáng/tối </button>
@@ -400,12 +400,6 @@
                 return false;
               }
               
-              // Check if version is supported
-              const majorVersion = parseInt(this.versionName.split('.')[0]);
-              if (majorVersion !== 20 && majorVersion !== 25) {
-                this.errors.versionName = 'Currently only versions 20.X and 25.X are supported';
-                return false;
-              }
               
               this.errors.versionName = '';
               return true;
